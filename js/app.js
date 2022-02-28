@@ -34,7 +34,7 @@ const displayDetails = drink => {
     console.log(drink);
     const detailsDiv = document.getElementById('details');
     detailsDiv.innerHTML = `
-        <div class="w-50 mx-auto">
+        <div class="w-100 mx-auto">
             <img src="${drink.strDrinkThumb}" class="img-fluid" alt="drink-image">
             <div>
                 <h3 class="my-3">${drink.strDrink}</h3>
