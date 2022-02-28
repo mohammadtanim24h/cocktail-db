@@ -32,4 +32,16 @@ const loadDetails = drinkId => {
 
 const displayDetails = drink => {
     console.log(drink);
+    const detailsDiv = document.getElementById('details');
+    detailsDiv.innerHTML = `
+        <div class="w-50 mx-auto">
+            <img src="${drink.strDrinkThumb}" class="img-fluid" alt="drink-image">
+            <div>
+                <h3 class="my-3">${drink.strDrink}</h3>
+                <h5 class="my-3">Category: ${drink.strCategory}</h5>
+                <p class="my-3 text-muted">Instructions: ${drink.strInstructions}</p>
+            </div>
+        </div>
+    `;
+
 }
