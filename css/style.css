@@ -1,0 +1,8 @@
+#cocktail-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.drink {
+    margin: 10px;
+}
