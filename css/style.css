@@ -6,3 +6,7 @@
 .drink {
     margin: 10px;
 }
+
+#spinner {
+    display: none;
+}

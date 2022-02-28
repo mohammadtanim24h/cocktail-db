@@ -1,6 +1,8 @@
 const searchCocktail = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
+    searchField.value = '';
+    document.getElementById('spinner').style.display = 'block';
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`)
         .then(res => res.json())
         .then(data => displayCocktail(data.drinks));
@@ -8,6 +10,8 @@ const searchCocktail = () => {
 
 const displayCocktail = drinks => {
     const cocktailContainer = document.getElementById('cocktail-container');
+    cocktailContainer.innerHTML = '';
+    document.getElementById('spinner').style.display = 'none';
     drinks.forEach(drink => {
         const div = document.createElement('div');
         div.classList.add('drink');
